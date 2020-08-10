@@ -1,0 +1,2 @@
+- Run `npm run test`
+- Expected output `users: Collection { initialized: true, dirty: false }` but getting `users: Collection { initialized: false, dirty: false }`

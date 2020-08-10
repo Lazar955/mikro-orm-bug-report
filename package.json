@@ -1,0 +1,32 @@
+{
+  "name": "test-orm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start:dev": "nodemon",
+    "clean": "rm -rf dist; rm -rf docs",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mikro-orm/postgresql": "^4.0.0-alpha.0",
+    "@mikro-orm/sqlite": "^4.0.0-alpha.0",
+    "@types/jest": "^26.0.7",
+    "mikro-orm": "^4.0.0-rc.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.14",
+    "@types/pg": "^7.14.3",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.4",
+    "ts-lint": "^4.5.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}

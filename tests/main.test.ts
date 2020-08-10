@@ -20,7 +20,7 @@ describe("test", async () => {
     DI.orm = await MikroORM.init({
       type: "postgresql",
       entities: [Company, User],
-      dbName: "ferrum",
+      dbName: "postgres",
       logger: console.log.bind(console),
       debug: true,
       host: "localhost",

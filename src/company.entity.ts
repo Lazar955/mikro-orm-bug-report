@@ -1,12 +1,10 @@
 import {
   Collection,
   Entity,
-  ManyToMany,
   OneToMany,
   PrimaryKey,
   Property,
-  wrap,
-} from "mikro-orm";
+} from "@mikro-orm/core";
 import { User } from "./user.entity";
 @Entity()
 export class Company {
@@ -24,9 +22,6 @@ export class Company {
 
   @Property()
   uuid!: string;
-
-  @Property({ fieldName: "date_created", hidden: true })
-  dateCreated!: Date;
 
   @OneToMany(() => User, (x) => x.company, {
     persist: false,

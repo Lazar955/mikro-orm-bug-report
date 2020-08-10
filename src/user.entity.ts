@@ -9,7 +9,7 @@ import {
   Property,
   wrap,
   IdentifiedReference,
-} from "mikro-orm";
+} from "@mikro-orm/core";
 @Entity()
 export class User {
   @PrimaryKey({ hidden: true })
@@ -30,9 +30,6 @@ export class User {
   @Property()
   uuid!: string;
 
-  @Property({ hidden: true })
-  dateCreated!: Date;
-
   @ManyToOne(() => Company, { eager: false })
   company: Company;
 
@@ -50,12 +47,5 @@ export class User {
     this.uuid = uuid;
     this.company = company;
     this.password = password;
-  }
-
-  /**
-   * setId
-   */
-  public setId(id: number) {
-    this.id = id;
   }
 }
